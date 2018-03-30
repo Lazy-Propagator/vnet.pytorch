@@ -44,7 +44,7 @@ import operator
 
 
 nodule_masks = "normalized_brightened_CT_2_5"
-lung_masks = "inferred_seg_lungs_2_5"
+#lung_masks = "inferred_seg_lungs_2_5"
 ct_images = "luna16_ct_normalized"
 ct_targets = nodule_masks
 target_split = [2, 2, 2]
@@ -190,10 +190,10 @@ def main():
         transforms.ToTensor(),
         normTransform
     ])
-    if ct_targets == nodule_masks:
-        masks = lung_masks
-    else:
-        masks = None
+    #if ct_targets == nodule_masks:
+    #    masks = lung_masks
+    #else:
+    masks = None
 
     if args.inference != '':
         if not args.resume:
