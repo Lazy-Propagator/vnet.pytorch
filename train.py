@@ -218,7 +218,7 @@ def main():
     trainLoader = DataLoader(trainSet, batch_size=batch_size, shuffle=True, **kwargs)
     print("loading test set")
     testLoader = DataLoader(
-        dset.LUNA16(root='luna16', images=ct_images, targets=ct_targets,
+        dset.LUNA16(root='/content/drive/luna16', images=ct_images, targets=ct_targets,
                     mode="test", transform=testTransform, seed=args.seed, masks=masks, split=target_split),
         batch_size=batch_size, shuffle=False, **kwargs)
 
