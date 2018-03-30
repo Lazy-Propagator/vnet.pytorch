@@ -39,7 +39,7 @@ import operator
 #nodule_masks = "normalized_mask_5_0"
 #lung_masks = "normalized_seg_lungs_5_0"
 #ct_images = "normalized_CT_5_0"
-#target_split = [1, 1, 1]
+target_split = [1, 1, 1]
 #ct_targets = nodule_masks
 
 
@@ -47,7 +47,7 @@ nodule_masks = "normalized_brightened_CT_2_5"
 #lung_masks = "inferred_seg_lungs_2_5"
 ct_images = "luna16_ct_normalized"
 ct_targets = nodule_masks
-target_split = [2, 2, 2]
+#target_split = [2, 2, 2]
 
 def weights_init(m):
     classname = m.__class__.__name__
