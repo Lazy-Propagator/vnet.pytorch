@@ -212,7 +212,7 @@ def main():
 
     kwargs = {'num_workers': 1, 'pin_memory': True} if args.cuda else {}
     print("loading training set")
-    trainSet = dset.LUNA16(root='luna16', images=ct_images, targets=ct_targets,
+    trainSet = dset.LUNA16(root='/content/drive/luna16', images=ct_images, targets=ct_targets,
                            mode="train", transform=trainTransform, 
                            class_balance=class_balance, split=target_split, seed=args.seed, masks=masks)
     trainLoader = DataLoader(trainSet, batch_size=batch_size, shuffle=True, **kwargs)
